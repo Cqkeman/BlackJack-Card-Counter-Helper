@@ -11,13 +11,14 @@
 #include <iostream>
 #include <vector>
 
-class Table
-{
+class Table {
 public:
+
+        Table();
 
         Hand dealer;
 
-        std::vector<Hand> players = {};
+        std::vector<Hand> players[] = {};
 
         Deck shoe;
 

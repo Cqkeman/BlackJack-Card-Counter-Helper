@@ -9,6 +9,7 @@
 #include <time.h>
 #include <vector>
 
+
 using namespace std;
 
 Deck::Deck(bool hasJokers_, int decks_)
@@ -53,6 +54,7 @@ void Deck::shuffle()
         srand(time(NULL));
         random_shuffle(cards.begin(), cards.end());
 
+        cutDepth = (rand() % 10)+decks*52/8;
 }
 
 // Regenerate deck

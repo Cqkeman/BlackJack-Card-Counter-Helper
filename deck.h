@@ -16,6 +16,8 @@ public:
         int get_deck_size();
         int get_remaining();
 
+        int cutDepth;
+
 
 
 private:
@@ -23,7 +25,6 @@ private:
         bool hasJokers;
         int decks, deckSize;
         std::vector<int> cards, discard;
-
 
 };
 

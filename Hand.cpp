@@ -30,7 +30,7 @@ int Hand::get_hand_total()
                                     case'J':
                                                 total +=10;
                                                 break;
-                                    case'T':
+                                    case'X':
                                                 total +=10;
                                                 break;
                                     case'9':

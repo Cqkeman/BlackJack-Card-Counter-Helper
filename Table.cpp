@@ -3,6 +3,7 @@
 //
 
 #include "Table.h"
+#include <cstdlib>
 
 int Table::payout(Hand recipient)
 {
@@ -26,6 +27,7 @@ void Table::game_deal()
                         shoe.draw()
                         )
                 );
+
         dealer.downCards.push_back(
                 Card::to_char(
                         shoe.draw()
@@ -135,4 +137,10 @@ void Table::blackjack(Hand recipient)
 
         recipient.blackjack = true;
         recipient.stand = true;
+}
+
+Table::Table(int numDecks)
+{
+        Deck shoe(false, numDecks);
+        shoe.shuffle();
 }

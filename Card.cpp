@@ -60,29 +60,33 @@ char to_char(int value)
         int card = (value % 13 == 0) ? 13 : value % 13;
         int suit = (int) floor((double) value / 13.25);
 
-        switch (card)
-        {
+        char cardChar;
+
+        switch (card) {
                 case 1:
-                        cardName = "Ace";
+                        cardChar = "A";
+                        break;
+                case 10:
+                        cardChar = 'X';
                         break;
 
                 case 11:
-                        cardName = "Jack";
+                        cardChar = "J";
                         break;
 
                 case 12:
-                        cardName = "Queen";
+                        cardChar = "Q";
                         break;
 
                 case 13:
-                        cardName = "King";
+                        cardChar = "K";
                         break;
 
                 default:
-                        stringstream ss;
-                        ss << card;
-                        cardName = ss.str();
+                        cardChar = '0' + card;
                         break;
-
         }
+
+        return cardChar;
+
 }
