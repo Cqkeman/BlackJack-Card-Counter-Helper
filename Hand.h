@@ -8,14 +8,23 @@
 class Hand
 {
 public:
-    std::vector<char> upCards;
-    std::vector<char> downCards;
+        std::vector<char> upCards = {};
+        std::vector<char> downCards = {};
 
-    int get_hand_total();
-    void clear_hand();
-    void show_downCards();
+        int bet = 0;
+
+        bool stand = false;
+        bool blackjack = false;
+        bool standoff = false;
+        bool doubled = false;
+
+        int insured = 0;
 
 
+
+        int get_hand_total();
+        void clear_hand();
+        void show_downCards();
 };
 
 
