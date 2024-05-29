@@ -19,7 +19,7 @@ int Hand::get_hand_total()
         {
             case'A':
                 total +=11;
-                softness++
+                softness++;
                 break;
             case'K':
                 total +=10;

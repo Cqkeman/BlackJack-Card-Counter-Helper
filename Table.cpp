@@ -3,3 +3,18 @@
 //
 
 #include "Table.h"
+
+void Table::game_deal()
+{
+
+}
+
+void Table::hit(Hand recipient)
+{
+
+}
+
+void Table::stand(Hand recipient)
+{
+
+}

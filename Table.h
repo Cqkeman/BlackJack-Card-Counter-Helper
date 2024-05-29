@@ -11,7 +11,7 @@
 
 class Table
 {
-    Hand player, dealer;
+    Hand dealer;
     Deck shoe;
 
     void game_deal();
@@ -20,8 +20,7 @@ class Table
     void stand(Hand recipient);
     void split(Hand recipient);
     void doubleDown(Hand recipient);
-
-
+    void
 
 
 };

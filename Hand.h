@@ -5,7 +5,6 @@
 #ifndef HAND_H
 #define HAND_H
 
-
 class Hand
 {
 public:
@@ -15,6 +14,7 @@ public:
     int get_hand_total();
     void clear_hand();
     void show_downCards();
+
 
 };
 
