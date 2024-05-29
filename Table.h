@@ -72,6 +72,12 @@ public:
  *      checks if hand total is 9, 10, or 11, then if that is true
  *      it doubles the bet and sets doubled to true so it can't be done again or split
  *
+ * insure(recipient)
+ *      checks no invalid options
+ *
+ *      checks dealers only upcard is an ace
+ *
+ *
  */
 
 #endif //TABLE_H

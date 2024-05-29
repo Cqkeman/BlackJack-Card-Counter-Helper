@@ -136,6 +136,3 @@ void Table::blackjack(Hand recipient)
         recipient.blackjack = true;
         recipient.stand = true;
 }
-
-
-
