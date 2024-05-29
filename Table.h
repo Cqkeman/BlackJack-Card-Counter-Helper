@@ -8,21 +8,24 @@
 #include "Hand.h"
 #include "Card.h"
 #include "deck.h"
+#include <iostream>
+#include <vector>
 
 class Table
 {
-    Hand dealer;
-    Deck shoe;
+public:
+        Hand dealer;
 
-    void game_deal();
+        std::vector<Hand> players;
 
-    void hit(Hand recipient);
-    void stand(Hand recipient);
-    void split(Hand recipient);
-    void doubleDown(Hand recipient);
-    void
+        Deck shoe;
 
+        void game_deal();
 
+        void hit(Hand recipient);
+        void stand(Hand recipient);
+        void split(Hand recipient);
+        void doubleDown(Hand recipient);
 };
 
 

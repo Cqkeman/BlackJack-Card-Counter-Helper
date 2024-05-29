@@ -18,3 +18,13 @@ void Table::stand(Hand recipient)
 {
 
 }
+
+void Table::split(Hand recipient)
+{
+
+}
+
+void Table::doubleDown(Hand recipient)
+{
+
+}
