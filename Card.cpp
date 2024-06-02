@@ -12,7 +12,7 @@ Card::Card()
 const string Card::SUITS[] = {"Spades", "Diamonds", "Clubs", "Hearts"};
 
 // Returns string representation of numerical card value
-string Card::to_string(int value)
+std::string Card::to_string(int value)
 {
         if (value == 53)
                 return "Black Joker";
@@ -55,7 +55,7 @@ string Card::to_string(int value)
 
 }
 
-char to_char(int value)
+char Card::to_char(int value)
 {
         int card = (value % 13 == 0) ? 13 : value % 13;
         int suit = (int) floor((double) value / 13.25);
@@ -64,22 +64,22 @@ char to_char(int value)
 
         switch (card) {
                 case 1:
-                        cardChar = "A";
+                        cardChar = 'A';
                         break;
                 case 10:
                         cardChar = 'X';
                         break;
 
                 case 11:
-                        cardChar = "J";
+                        cardChar = 'J';
                         break;
 
                 case 12:
-                        cardChar = "Q";
+                        cardChar = 'Q';
                         break;
 
                 case 13:
-                        cardChar = "K";
+                        cardChar = 'K';
                         break;
 
                 default:

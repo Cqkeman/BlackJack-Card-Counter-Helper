@@ -20,19 +20,44 @@ int Table::payout(Hand recipient)
 
 }
 
+void Table::make_bets(int numHands, int currentWealth)
+{
+        Hand handDefault;
+        int bet;
+        int maxLoss = currentWealth;
+
+        players.clear();
+
+        for (int i = 0; i < numHands; ++i) {
+                players.push_back(handDefault);
+                std::cout << "Place bet for hand " << '1'+i << "\n";
+                while(true){
+                        std::cin >> bet;
+                        if(maxLoss - bet >=0 && bet>=0){
+                                maxLoss -= bet;
+                                players[i].bet = bet;
+                                break;
+                        }
+                        std::cout << "that bet would make you broke, have another bet:\n";
+                }
+        }
+
+        for (int i = 0; i < players.size(); ++i) {
+                if(players[i].bet < 2){
+                        std::cout << "I\'ve noticed that hand " << '1'+i << " has a bet below the minimum\n";
+                        std::cout << "this isn\'t allowed so ill remove that hand\n";
+                        players.erase(players.begin()+i);
+                }
+
+        }
+
+
+}
+
 void Table::game_deal()
 {
-        dealer.upCards.push_back(
-                Card::to_char(
-                        shoe.draw()
-                        )
-                );
-
-        dealer.downCards.push_back(
-                Card::to_char(
-                        shoe.draw()
-                        )
-                );
+        dealer.upCards.push_back(Card::to_char(shoe.draw()));
+        dealer.downCards.push_back(Card::to_char(shoe.draw()));
 
         for(int i=0; i<2; i++)
         {
@@ -105,7 +130,7 @@ void Table::doubleDown(Hand recipient)
         if(recipient.stand)
                 return;
 
-        if(8 <= recipient.get_hand_total() <= 11)
+        if(9 <= recipient.get_hand_total() && recipient.get_hand_total() <= 11)
                 recipient.bet *= 2;
 
         recipient.doubled = true;

@@ -14,11 +14,11 @@
 class Table {
 public:
 
-        Table();
+        explicit Table(int numDecks);
 
         Hand dealer;
 
-        std::vector<Hand> players[] = {};
+        std::vector<Hand> players = {};
 
         Deck shoe;
 
@@ -37,6 +37,8 @@ public:
         void insure(Hand recipient);
 
         void blackjack(Hand recipient);
+
+        void make_bets(int numHands, int currentWealth);
 };
 
 

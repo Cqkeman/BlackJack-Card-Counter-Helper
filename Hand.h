@@ -17,6 +17,7 @@ public:
         bool blackjack = false;
         bool standoff = false;
         bool doubled = false;
+        bool bust = false;
 
         int insured = 0;
 
