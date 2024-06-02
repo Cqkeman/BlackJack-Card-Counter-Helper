@@ -13,13 +13,14 @@ int main()
 {
         const int numDecks = 8;
         int wealth = 10000;
+        int minWealth = wealth
 
 
         Table Blackjack(numDecks);
 
 
         while(true){
-
+                Blackjack.game_deal();
 
 
                 break;

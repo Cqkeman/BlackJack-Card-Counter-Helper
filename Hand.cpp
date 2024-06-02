@@ -13,7 +13,7 @@ int Hand::get_hand_total()
             int total = 0;
             int softness = 0;
 
-            for(int i = 0; i< upCards.size(); ++i)
+            for(int i = 0; i< upCards.size();i++)
             {
                         switch(upCards[i])
                         {
